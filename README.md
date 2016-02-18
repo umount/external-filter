@@ -52,7 +52,9 @@ By default, the filtered content will replace the original. If instead you want 
 
 Also, define a corresponding additional field for your storage if necessary (e.g. add a new column to your RDBMS schema) and add an additional field definition to your Solr schema if you're using Solr.
 
-To enable the plugin, override the default list by adding the following (notice the addition of `element-selector`):
+To enable the plugin, override the default list by adding the following (notice the addition of `external-filter`):
+
+Use parse-html, for parsing html tags, parse-tika, not present full DOM of html tags.
 
 ```xml
 <property>
