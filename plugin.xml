@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin
+   id="external-filter"
+   name="Blacklist and Whitelist Parser and Indexer"
+   version="1.0.0"
+   provider-name="external">
+
+   <runtime>
+      <library name="external-filter.jar">
+         <export name="*"/>
+      </library>
+   </runtime>
+
+   <extension id="external.nutch.filter.ExternalHtmlParseIndexer"
+              name="Nutch Blacklist and Whitelist Indexing Filter"
+              point="org.apache.nutch.indexer.IndexingFilter">
+      <implementation id="ExternalHtmlParseIndexer"
+                 class="external.nutch.plugin.filter.ExternalHtmlParseIndexer"/>
+   </extension>
+
+   <extension id="external.nutch.filter.ExternalHtmlParseFilter"
+              name="Nutch Blacklist and Whitelist Parsing Filter"
+              point="org.apache.nutch.parse.ParseFilter">
+      <implementation id="ExternalHtmlParseFilter"
+                 class="external.nutch.plugin.filter.ExternalHtmlParseFilter"/>
+   </extension>
+</plugin>
