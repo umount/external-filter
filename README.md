@@ -1,4 +1,4 @@
-nutch-element-selector
+Nutch HTML Parse Filter (external-filter)
 ======================
 
 HTML Filter plugin for Nutch 2.3.
