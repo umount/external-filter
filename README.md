@@ -1,7 +1,8 @@
 nutch-element-selector
 ======================
 
-Nutch 2.3 plugin for whitelisting/blacklisting specific HTML elements.
+HTML Filter plugin for Nutch 2.3.
+Whitelisting/blacklisting specific HTML elements.
 
 Usage
 ======================
@@ -56,7 +57,7 @@ To enable the plugin, override the default list by adding the following (notice 
 ```xml
 <property>
     <name>plugin.includes</name>
-    <value>protocol-http|urlfilter-regex|parse-(html|tika)|element-filter|index-(basic|anchor)|urlnormalizer-(pass|regex|basic)|scoring-opic</value>
+    <value>protocol-http|urlfilter-regex|parse-(html|tika)|external-filter|index-(basic|anchor)|urlnormalizer-(pass|regex|basic)|scoring-opic</value>
     <description>
         Regular expression naming plugin directory names to
         include.  Any plugin not matching this expression is excluded.
@@ -69,4 +70,4 @@ To enable the plugin, override the default list by adding the following (notice 
 </property>
 ```
 
-Unless you're overriding the storage field, it is important to include `element-filter` _before_ `index-(basic|anchor)`!
+Unless you're overriding the storage field, it is important to include `external-filter` _before_ `index-(basic|anchor)`!
